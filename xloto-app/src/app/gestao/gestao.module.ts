@@ -34,12 +34,14 @@ import { FaqComponent } from './faq/faq.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { XlotoComponent } from './xloto/xloto.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, NgForm } from '@angular/forms';
 
 
 @NgModule({
   declarations: [GestaoComponent, NavbarComponent, ChamadaComponent, DificuldadesComponent, SolucoesComponent, BeneficiosComponent, DepoimentosComponent, ModalVideoComponent, PlanosComponent, CompraColetivaComponent, ModalCompradoresComponent, ModalTermosComponent, BonusComponent, GarantiaComponent, ComoFuncionaComponent, FaqComponent, CadastroComponent, XlotoComponent, FooterComponent],
   imports: [
     CommonModule,
+    FormsModule,
     CommonModule,
     MatToolbarModule,
     MatIconModule,

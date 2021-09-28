@@ -38,21 +38,21 @@
             <div class="col-xs-12 col-md-6 right">
                 <div class="card" id="sessao5">
                     <h3>Entrar em contato</h3>
-                    <form>
+                    <form (ngSubmit)="enviarCadastro($event)">
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Email</mat-label>
-                            <input type="email" matInput placeholder="Ex. xloto@examplo.com" #inputEmail>
+                            <input [(ngModel)]="contato.email" [ngModelOptions]="{standalone: true}" type="email" matInput placeholder="Ex. xloto@examplo.com" #inputEmail pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
                         </mat-form-field>
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Nome</mat-label>
-                            <input type="text" matInput placeholder="Nome" #inputNome>
+                            <input [(ngModel)]="contato.nome" [ngModelOptions]="{standalone: true}" type="text" matInput placeholder="Nome" #inputNome required>
                         </mat-form-field>
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Mensagem</mat-label>
-                            <textarea matInput placeholder="Escreva sua mensagem..." #inputMensagem></textarea>
+                            <textarea [(ngModel)]="contato.msg" name="msg" matInput placeholder="Escreva sua mensagem..." #inputMensagem='ngModel' required></textarea>
                         </mat-form-field>
                         <button
-                            (click)="enviarCadastro(inputEmail.value, inputNome.value,inputMensagem.value )">Enviar</button>
+                           [disabled]="carregando" >{{ carregando ? 'Enviando..' : 'Enviar'}}</button>
                     </form>
                 </div>
             </div>

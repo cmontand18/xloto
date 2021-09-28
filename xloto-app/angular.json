@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "xloto-app"
+  "defaultProject": "xloto-app",
+  "cli": {
+    "analytics": false
+  }
 }

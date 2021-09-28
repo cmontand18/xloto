@@ -13,6 +13,7 @@ import { AngularFireDatabaseModule  } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 import { AdminModule } from './admin/admin.module';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     SimulacaoVendasModule,
     AdminModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

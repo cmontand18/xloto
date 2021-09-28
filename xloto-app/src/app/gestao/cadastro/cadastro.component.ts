@@ -8,21 +8,32 @@ import { GestaoService } from 'src/app/domains/services/gestao/gestao.service';
 })
 export class CadastroComponent implements OnInit {
 
+  carregando = false;
+  contato = {
+    email: '',
+    nome: '',
+    msg: '',
+    origem: 'Página de vendas'
+  };
   constructor(private gestaoService: GestaoService) { }
 
   ngOnInit(): void {
   }
-  
-  enviarCadastro(email, nome, msg) {
 
-    const array = {
-      email: email,
-      nome: nome,
-      msg: msg
+  enviarCadastro(event: any): any {
+    event.preventDefault();
+    if (this.contato.email === '' || this.contato.nome === '' || this.contato.msg === '') {
+      return false;
     }
+    this.carregando = true;
 
-    this.gestaoService.enviarContato(array);
+    this.gestaoService.enviarEmail(this.contato).toPromise().then(() => {
+      alert('Contato Enviado com sucesso!');
+      window.location.reload();
+    }).catch((e) => {
+      console.log(e);
 
-    window.alert("Enviado");
+    }).finally(() => this.carregando = false);
+
   }
 }

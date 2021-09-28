@@ -1,13 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GestaoService {
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase,
+              private http: HttpClient) { }
 
   // PLANO BÁSICO MENSAL
   enviarPlanoMensaisBasico(planos) {
@@ -180,5 +184,10 @@ export class GestaoService {
           return changes.map(c => ({ key: c.payload.key, value: c.payload.val() }));
         })
       );
+  }
+
+  enviarEmail(obj: {email: string, nome: string, msg: string, origem: string}): Observable<any> {
+    const url = environment.emailEndPont;
+    return this.http.post<Observable<any>>(url, obj);
   }
 }

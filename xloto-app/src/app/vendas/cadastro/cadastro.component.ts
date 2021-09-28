@@ -8,22 +8,32 @@ import { VendasService } from 'src/app/domains/services/vendas/vendas.service';
 })
 export class CadastroComponent implements OnInit {
 
+  carregando = false;
+  contato = {
+    email: '',
+    nome: '',
+    msg: '',
+    origem: 'Página de vendas'
+  };
   constructor(private vendaService: VendasService) { }
 
   ngOnInit(): void {
   }
 
 
-  enviarCadastro(email, nome, msg) {
-
-    const array = {
-      email: email,
-      nome: nome,
-      msg: msg
+  enviarCadastro(event: any): any {
+    event.preventDefault();
+    if (this.contato.email === '' || this.contato.nome === '' || this.contato.msg === '') {
+      return false;
     }
+    this.carregando = true;
 
-    this.vendaService.enviarContato(array);
+    this.vendaService.enviarEmail(this.contato).toPromise().then(() => {
+      alert('Contato Enviado com sucesso!');
+      window.location.reload();
+    }).catch((e) => {
+      console.log(e);
+    }).finally(() => this.carregando = false);
 
-    window.alert("Enviado");
   }
 }
