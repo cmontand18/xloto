@@ -35,6 +35,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { XlotoComponent } from './xloto/xloto.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { FormsModule, NgForm } from '@angular/forms';
     MatInputModule,
     NgxYoutubePlayerModule.forRoot(),
     ClipboardModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    NgxMaskModule
   ]
 })
 export class GestaoModule { }

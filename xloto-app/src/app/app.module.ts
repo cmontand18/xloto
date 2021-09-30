@@ -14,7 +14,11 @@ import { environment } from 'src/environments/environment';
 import { AdminModule } from './admin/admin.module';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdminModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot(maskConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

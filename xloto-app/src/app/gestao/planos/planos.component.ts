@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contato } from '../../domains/models/contato';
 import { GestaoService } from 'src/app/domains/services/gestao/gestao.service';
 
 @Component({
@@ -17,6 +18,15 @@ export class PlanosComponent implements OnInit {
   planoEscolhidoCompleto = null
   tipoPlano = true;
 
+  contato: Contato = {
+    nome: '',
+    telefone: '',
+    quantas_lotericas: '',
+    email: '',
+    origem: 'plano customizado'
+  };
+
+  loading = false;
 
   constructor(private gestaoService: GestaoService) { }
 
@@ -106,5 +116,30 @@ export class PlanosComponent implements OnInit {
   comprar(number) {
     if(number === 1) window.open(this.planoEscolhidoBasico.link, '_blank');
     if(number === 2) window.open(this.planoEscolhidoCompleto.link, '_blank');
+  }
+
+  enviarContato(): any {
+    if ( this.contato.nome === '' ||
+    this.contato.quantas_lotericas === '' ||
+    this.contato.email === '' ||
+    this.contato.telefone === '' ) {
+      alert('Preencha os campos obrigatórios');
+      return false;
+    }
+    this.loading = true;
+    this.gestaoService.enviarEmail(this.contato).toPromise().then(()=> {
+      alert('Contato enviado com sucesso!');
+    }).catch((e) => {
+      console.log(e);
+    }).finally(() => {
+      this.loading = false;
+      this.contato = {
+        nome: '',
+        telefone: '',
+        quantas_lotericas: '',
+        email: '',
+        origem: 'plano customizado'
+      };
+    });
   }
 }

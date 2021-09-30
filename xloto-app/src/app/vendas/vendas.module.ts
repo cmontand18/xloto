@@ -35,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ModalTermosComponent } from './modal-termos/modal-termos.component';
 import { ModalCompradoresComponent } from './modal-compradores/modal-compradores.component';
 import { FormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     NgxYoutubePlayerModule.forRoot(),
     ClipboardModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    NgxMaskModule
   ],
 })
 export class VendasModule { }

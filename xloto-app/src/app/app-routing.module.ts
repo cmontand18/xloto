@@ -7,7 +7,7 @@ import { SimulacaoVendasComponent } from './simulacao-vendas/simulacao-vendas.co
 import { VendasComponent } from './vendas/vendas.component';
 
 const routes: Routes = [
-  { path: '', component: GestaoComponent },
+  { path: '', component: VendasComponent },
   { path: 'gestao', component: GestaoComponent },
   { path: 'simulacao-gestao', component: SimulacaoGestaoComponent},
   { path: 'simulacao-vendas', component: SimulacaoVendasComponent},

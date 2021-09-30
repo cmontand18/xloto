@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contato } from 'src/app/domains/models/contato';
 import { VendasService } from 'src/app/domains/services/vendas/vendas.service';
 
 @Component({
@@ -9,9 +10,10 @@ import { VendasService } from 'src/app/domains/services/vendas/vendas.service';
 export class CadastroComponent implements OnInit {
 
   carregando = false;
-  contato = {
+  contato: Contato = {
     email: '',
     nome: '',
+    telefone: '',
     msg: '',
     origem: 'Página de vendas'
   };

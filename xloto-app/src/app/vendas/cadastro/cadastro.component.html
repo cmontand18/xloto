@@ -48,6 +48,10 @@
                             <input [(ngModel)]="contato.nome" [ngModelOptions]="{standalone: true}" type="text" matInput placeholder="Nome" #inputNome required>
                         </mat-form-field>
                         <mat-form-field class="example-full-width" appearance="outline">
+                          <mat-label>Telefone</mat-label>
+                          <input mask="(00) 00000-0000 || (00) 0000-0000" [(ngModel)]="contato.telefone" [ngModelOptions]="{standalone: true}" type="text" matInput placeholder="telefone" #inputTelefone required>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Mensagem</mat-label>
                             <textarea [(ngModel)]="contato.msg" name="msg" matInput placeholder="Escreva sua mensagem..." #inputMensagem='ngModel' required></textarea>
                         </mat-form-field>

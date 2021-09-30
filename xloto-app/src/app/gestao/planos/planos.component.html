@@ -414,12 +414,11 @@
                         funcionalidades que necessitar</h4>
 
 
-                    <form action="">
-
+                    <form>
                         <div class="form-group">
                             <img src="/assets/img/icon_user.svg" alt="" srcset="">
                             <mat-form-field class="example-full-width" appearance="fill">
-                                <input type="text" matInput placeholder="Nome">
+                                <input [(ngModel)]="contato.nome"[ngModelOptions]="{standalone: true}" name="nome" #nome type="text" matInput placeholder="Nome">
                             </mat-form-field>
                         </div>
 
@@ -428,26 +427,28 @@
                                 whatsapp
                             </span>
                             <mat-form-field class="example-full-width" appearance="fill">
-                                <input type="text" matInput placeholder="Whatsapp">
+                                <input [dropSpecialCharacters]="false" mask="(00) 00000-0000 || (00) 0000-0000" [(ngModel)]="contato.telefone"[ngModelOptions]="{standalone: true}" name="telefone" #telefone  type="text" matInput placeholder="Whatsapp">
                             </mat-form-field>
                         </div>
 
                         <div class="form-group">
                             <img src="/assets/img/icon_computador.svg" alt="" srcset="">
                             <mat-form-field class="example-full-width" appearance="fill">
-                                <input type="text" matInput placeholder="Quantos terminais?">
+                                <input [(ngModel)]="contato.quantas_lotericas"[ngModelOptions]="{standalone: true}" type="number" min="1" name="quantas_lotericas" #quantas_lotericas matInput placeholder="Quantas lotéricas?">
                             </mat-form-field>
                         </div>
 
                         <div class="form-group">
                             <img src="/assets/img/icon_email.svg" alt="" srcset="">
                             <mat-form-field class="example-full-width" appearance="fill">
-                                <input type="email" matInput placeholder="Email">
+                                <input [(ngModel)]="contato.email"[ngModelOptions]="{standalone: true}" name="email" #email type="email" matInput placeholder="Email">
                             </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                          <button (click)="enviarContato()" type="submit" mat-raised-button [disabled]="loading" >ENVIAR CADASTRO</button>
                         </div>
                     </form>
 
-                    <button mat-raised-button>ENVIAR CADASTRO</button>
                 </div>
             </div>
         </div>

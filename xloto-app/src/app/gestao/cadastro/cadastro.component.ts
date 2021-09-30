@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contato } from 'src/app/domains/models/contato';
 import { GestaoService } from 'src/app/domains/services/gestao/gestao.service';
 
 @Component({
@@ -9,11 +10,12 @@ import { GestaoService } from 'src/app/domains/services/gestao/gestao.service';
 export class CadastroComponent implements OnInit {
 
   carregando = false;
-  contato = {
+  contato: Contato = {
     email: '',
+    telefone: '',
     nome: '',
     msg: '',
-    origem: 'Página de vendas'
+    origem: 'Gestao'
   };
   constructor(private gestaoService: GestaoService) { }
 

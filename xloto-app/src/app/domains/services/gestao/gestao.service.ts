@@ -4,6 +4,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../../../environments/environment';
+import { Contato } from '../../models/contato';
 
 @Injectable({
   providedIn: 'root'
@@ -186,8 +187,9 @@ export class GestaoService {
       );
   }
 
-  enviarEmail(obj: {email: string, nome: string, msg: string, origem: string}): Observable<any> {
+  enviarEmail(obj: Contato): Observable<any> {
     const url = environment.emailEndPont;
     return this.http.post<Observable<any>>(url, obj);
   }
+
 }
