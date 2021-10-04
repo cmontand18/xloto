@@ -39,13 +39,13 @@
                 <div class="card" id="sessao5">
                     <h3>Entrar em contato</h3>
                     <form (ngSubmit)="enviarCadastro($event)">
+                      <mat-form-field class="example-full-width" appearance="outline">
+                          <mat-label>Nome</mat-label>
+                          <input [(ngModel)]="contato.nome" [ngModelOptions]="{standalone: true}" type="text" matInput placeholder="Nome" #inputNome required>
+                      </mat-form-field>
                         <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Email</mat-label>
                             <input [(ngModel)]="contato.email" [ngModelOptions]="{standalone: true}" type="email" matInput placeholder="Ex. xloto@examplo.com" #inputEmail pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
-                        </mat-form-field>
-                        <mat-form-field class="example-full-width" appearance="outline">
-                            <mat-label>Nome</mat-label>
-                            <input [(ngModel)]="contato.nome" [ngModelOptions]="{standalone: true}" type="text" matInput placeholder="Nome" #inputNome required>
                         </mat-form-field>
                         <mat-form-field class="example-full-width" appearance="outline">
                           <mat-label>Telefone</mat-label>
