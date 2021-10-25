@@ -11,7 +11,7 @@
             font-weight: 600;
 
             @media (max-width: 768px) {
-                font-size: 23px;
+                font-size: 20px;
             }
         }
 
@@ -40,6 +40,12 @@
             font-family: "Circular Std";
             margin-bottom: 20px;
             line-height: 23px;
+
+            @media (max-width: 768px) {
+                text-align: center;
+                font-size: 14px;
+                padding: 0 15px;
+            }
         }
 
         .promocao {
@@ -113,6 +119,7 @@
             @media (max-width: 992px) {
                 width: auto;
                 margin: 0 7px 0 auto;
+                padding: 0 15px;
             }
 
             h4 {
@@ -122,6 +129,10 @@
                 text-transform: uppercase;
                 font-family: "Circular Std";
                 margin-bottom: 10px;
+
+                @media (max-width: 768px) {
+                    text-align: center;
+                }
             }
 
             .value {
@@ -135,6 +146,12 @@
                     margin-right: 15px;
                     font-family: "Circular Std";
                     margin-bottom: 10px;
+
+                    @media (max-width: 768px) {
+                        font-size: 31px;
+                        text-align: center;
+                        margin: 0 auto;
+                    }
                 }
 
                 p {
@@ -144,6 +161,10 @@
                     margin-bottom: 0px;
                     margin-right: 15px;
                     font-family: "Circular Std";
+
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
                 }
             }
 
@@ -152,6 +173,12 @@
                 font-size: 24px;
                 font-weight: bold;
                 font-family: "Circular Std";
+
+                @media (max-width: 768px) {
+                    font-size: 31px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
             }
         }
 
@@ -176,6 +203,13 @@
 
         .box-pocentagem {
             margin-bottom: 20px;
+
+            @media (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
             h4 {
                 color: #183b56;
@@ -220,6 +254,10 @@
                     border-radius: 20px;
                     margin-right: 25px;
 
+                    @media (max-width: 768px) {
+                        margin-right: 0px;
+                    }
+
                     .percent-value {
                         border-radius: 20px;
                         height: 16px;
@@ -235,6 +273,10 @@
                 font-size: 16px;
                 font-weight: initial;
                 color: #183b56;
+
+                @media (max-width: 768px) {
+                    text-align: center;
+                }
             }
 
             ul {
@@ -243,9 +285,19 @@
                 padding-left: 0px;
                 margin-bottom: 20px;
 
+                @media (max-width: 768px) {
+                    justify-content: center;
+                }
+
                 li {
                     margin-right: 20px;
                     animation: heartBeat 1s ease infinite;
+
+                    @media (max-width: 768px) {
+                        &:last-child() {
+                            margin-right: 0px;
+                        }
+                    }
                 }
             }
 
@@ -255,6 +307,11 @@
                 font-weight: 600;
                 margin-bottom: 10px;
                 font-family: "Circular Std";
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    padding: 0 15px;
+                }
             }
         }
     }
@@ -289,6 +346,6 @@
 
 .count {
     @media (max-width: 992px) {
-       display: none;
+        display: none;
     }
 }

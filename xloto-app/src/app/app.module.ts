@@ -13,6 +13,8 @@ import { AngularFireDatabaseModule  } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 import { AdminModule } from './admin/admin.module';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { PromocaoUmModule } from './promocao-um/promocao-um.module';
+import { PromocaoDoisModule } from './promocao-dois/promocao-dois.module';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     BrowserAnimationsModule,
     VendasModule,
     GestaoModule,
+    PromocaoUmModule,
+    PromocaoDoisModule,
     SimulacaoGestaoModule,
     SimulacaoVendasModule,
     AdminModule,

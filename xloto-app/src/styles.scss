@@ -159,5 +159,7 @@ $custom-typography: mat-typography-config(
 
 
 .rolagem {
-    overflow-x: hidden !important; 
+    @media (max-width: 992px) {
+        overflow-x: hidden !important; 
+     }
 }

@@ -32,7 +32,7 @@
                 </div> -->
 
                 <a href="https://xloto.com.br/simulador-gestao">
-                    <button> Fazer simulação </button>
+                    <button> Faça uma simulação agora ! </button>
                 </a>
 
                 <div class="box-pocentagem" *ngIf="compradores">
@@ -43,8 +43,8 @@
                             <div class="percent-value" [style.width]="getPercent()"></div>
                         </div>
 
-                        <a (click)="openModalCompradores()"> 
-                            <img src="/assets/img/preview-orange.svg" alt="" srcset=""> VEJA QUEM JÁ COMPROU </a>
+                        <!-- <a (click)="openModalCompradores()"> 
+                            <img src="/assets/img/preview-orange.svg" alt="" srcset=""> VEJA QUEM JÁ COMPROU </a> -->
                     </div>
                 </div>
 
@@ -64,8 +64,8 @@
                             </a>
                         </li>
                         <li>
-                            <a
-                                href="https://t.me/share/url?url=https://xloto.com.br/gestao&amp;text=https://xloto.com.br/gestao" target="_blank">
+                            <a href="https://t.me/share/url?url=https://xloto.com.br/gestao&amp;text=https://xloto.com.br/gestao"
+                                target="_blank">
                                 <img src="/assets/img/telegram.svg" alt="" srcset="">
                             </a>
                         </li>
@@ -79,7 +79,8 @@
                         ganharão um bônus extra. Encerra em 31/10/2021.</h3>
 
                     <div class="count">
-                        <lib-angular-countdown-dateTime [endDateBind]="endTime" [dayText]="'DIAS'" [hourText]="'HORAS'" [minutesText]="'MINUTOS'" [secondsText]="'SEGUNDOS'"> </lib-angular-countdown-dateTime>
+                        <lib-angular-countdown-dateTime [endDateBind]="endTime" [dayText]="'DIAS'" [hourText]="'HORAS'"
+                            [minutesText]="'MINUTOS'" [secondsText]="'SEGUNDOS'"> </lib-angular-countdown-dateTime>
                     </div>
                 </div>
             </div>
