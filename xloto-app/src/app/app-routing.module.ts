@@ -14,8 +14,8 @@ const routes: Routes = [
   //{ path: '', component: SimulacaoGestaoComponent},
   //{ path: '', component: SimulacaoVendasComponent},
   //{ path: '', component: AdminComponent }
-  { path: '', component: PromocaoOneComponent }
-  //{ path: '', component: PromocaoDoisComponent }
+  //{ path: '', component: PromocaoOneComponent }
+  { path: '', component: PromocaoDoisComponent }
 ];
 
 @NgModule({

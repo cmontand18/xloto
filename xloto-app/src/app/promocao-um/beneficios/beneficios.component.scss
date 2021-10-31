@@ -109,12 +109,11 @@
             .left {
                 h2 {
                     text-align: center;
-                    color: #808386;
+                    color: #22b14c;
                     font-family: "Circular Std";
                     font-weight: 600;
-                    text-transform: uppercase;
-                    font-size: 28px;
-                    font-style: italic;
+                    font-size: 23px;
+                    font-style: initial;
 
                     @media (max-width: 768px) {
                         margin-bottom: 20px;

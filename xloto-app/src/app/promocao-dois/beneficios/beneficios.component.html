@@ -14,6 +14,10 @@
               <div class="banner-item">
                 <span>01</span>
                 Lista favorita da lotérica
+                <span class="material-icons-outlined cheked-tooltip"
+                  matTooltip="Dos 100 áudios que consta no app, você monta a sua lista, podendo ter acesso rapidamente">
+                  info
+                </span>
               </div>
             </div>
           </ng-template>
@@ -24,6 +28,10 @@
               <div class="banner-item">
                 <span>02</span>
                 Lista de informativos
+                <span class="material-icons-outlined cheked-tooltip"
+                  matTooltip="Permite que você tenha vinhetas com assuntos relevantes, ex: covid, preciso de moedas...">
+                  info
+                </span>
               </div>
             </div>
           </ng-template>
@@ -34,6 +42,10 @@
               <div class="banner-item">
                 <span>03</span>
                 Programação horário fixo
+                <span class="material-icons-outlined cheked-tooltip"
+                  matTooltip="Você programa uma vinheta para tocar automaticamente todo dia sempre no mesmo horário, ex: Encerrando o expediente, bom dia ...">
+                  info
+                </span>
               </div>
             </div>
           </ng-template>
@@ -43,6 +55,10 @@
             <div class="banner-item">
               <span>04</span>
               Criamos sua vinheta
+              <span class="material-icons-outlined cheked-tooltip"
+                matTooltip=" Criamos a vinheta que você precisar e disponibilizamos em até 24 horas úteis">
+                info
+              </span>
             </div>
           </ng-template>
 
@@ -51,6 +67,10 @@
             <div class="banner-item">
               <span>05</span>
               Treinamento da equipe
+              <span class="material-icons-outlined cheked-tooltip"
+                matTooltip="O sistema a cada 15 dias envia vídeos com dicas de vendas e motivação pessoal">
+                info
+              </span>
             </div>
           </ng-template>
 
@@ -59,6 +79,10 @@
             <div class="banner-item">
               <span>06</span>
               Disparo de vinheta automática
+              <span class="material-icons-outlined cheked-tooltip"
+                matTooltip="Você programa a vinheta para tocar de tempo em tempo ( ex: a cadas 5 minutos)">
+                info
+              </span>
             </div>
           </ng-template>
 
@@ -67,6 +91,10 @@
             <div class="banner-item">
               <span>07</span>
               Disparo programado
+              <span class="material-icons-outlined cheked-tooltip"
+                matTooltip="Permite você disparar a vinheta no momento exato, ou seja, na horá que achar necessário">
+                info
+              </span>
             </div>
           </ng-template>
 
@@ -75,6 +103,10 @@
             <div class="banner-item">
               <span>08</span>
               Atualização de jogos diários
+              <span class="material-icons-outlined cheked-tooltip"
+                matTooltip="O sistema atualiza diariamente o valor dos jogos acumulados e atualiza no app pela manhã.">
+                info
+              </span>
             </div>
           </ng-template>
 
@@ -83,6 +115,10 @@
             <div class="banner-item">
               <span>09</span>
               Venda de publicidade
+              <span class="material-icons-outlined cheked-tooltip"
+                matTooltip="Você pode vender publicidade do comércio local, aumentando a receita da lotérica">
+                info
+              </span>
             </div>
           </ng-template>
 
@@ -91,6 +127,10 @@
             <div class="banner-item">
               <span>10</span>
               Notificação relâmpago
+              <span class="material-icons-outlined cheked-tooltip"
+                matTooltip="Você poderá receber ofertas, promoções e avisos relevantes que seja de interesse da categoria.">
+                info
+              </span>
             </div>
           </ng-template>
         </owl-carousel-o>
@@ -110,51 +150,91 @@
         <div class="item" [ngClass]="{'active': activeSlides === 0}" (click)="owlCar.to('slide-0')">
           <span>01</span>
           <h3>Lista favorita da lotérica</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="Dos 100 áudios que consta no app, você monta a sua lista, podendo ter acesso rapidamente">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 1}" (click)="owlCar.to('slide-1')">
           <span>02</span>
           <h3>Lista de informativos</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="Permite que você tenha vinhetas com assuntos relevantes, ex: covid, preciso de moedas...">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 2}" (click)="owlCar.to('slide-2')">
           <span>03</span>
           <h3>Programação horário fixo</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="Você programa uma vinheta para tocar automaticamente todo dia sempre no mesmo horário, ex: Encerrando o expediente, bom dia ...">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 3}" (click)="owlCar.to('slide-3')">
           <span>04</span>
           <h3>Criamos sua vinheta</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip=" Criamos a vinheta que você precisar e disponibilizamos em até 24 horas úteis">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 4}" (click)="owlCar.to('slide-4')">
           <span>05</span>
           <h3>Treinamento da equipe</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="O sistema a cada 15 dias envia vídeos com dicas de vendas e motivação pessoal">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 5}" (click)="owlCar.to('slide-5')">
           <span>06</span>
           <h3>Disparo de vinheta automática</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="Você programa a vinheta para tocar de tempo em tempo ( ex: a cadas 5 minutos)">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 6}" (click)="owlCar.to('slide-6')">
           <span>07</span>
           <h3>Disparo programado</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="Permite você disparar a vinheta no momento exato, ou seja, na horá que achar necessário">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 7}" (click)="owlCar.to('slide-7')">
           <span>08</span>
           <h3>Atualização de jogos diários</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="O sistema atualiza diariamente o valor dos jogos acumulados e atualiza no app pela manhã.">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 8}" (click)="owlCar.to('slide-8')">
           <span>09</span>
           <h3>Venda de publicidade</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="Você pode vender publicidade do comércio local, aumentando a receita da lotérica">
+            info
+          </span>
         </div>
 
         <div class="item" [ngClass]="{'active': activeSlides === 9}" (click)="owlCar.to('slide-9')">
           <span>10</span>
           <h3>Notificação relâmpago</h3>
+          <span class="material-icons-outlined cheked-tooltip"
+            matTooltip="Você poderá receber ofertas, promoções e avisos relevantes que seja de interesse da categoria.">
+            info
+          </span>
         </div>
       </div>
     </div>
